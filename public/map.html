@@ -1,28 +1,47 @@
-<div class="relative w-full h-screen bg-yellow-100 flex items-center justify-center">
-    <div class="relative w-[1000px] h-[700px] bg-cover bg-center rounded-lg shadow-2xl border-8 border-yellow-900"
-         style="background-image: url('../src/images/img-5.jpg');">
-         
-      <!-- Marqueurs ici -->
-      <div class="absolute h-100vh left-[30%] top-[40%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group">
-        <div class="w-4 h-4 bg-red-600 rounded-full border-2 border-white shadow-lg animate-pulse"></div>
-        <div class="absolute top-[-40px] left-1/2 transform -translate-x-1/2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded">
-          Château noir
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte Fantasy Interactive</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Uncial Antiqua', cursive;
+    }
+  </style>
+</head>
+<body class="bg-yellow-100">
+  <div class="relative w-full min-h-screen flex items-center justify-center p-4">
+    <div class="relative w-full max-w-5xl aspect-[16/9] bg-cover bg-center rounded-lg shadow-2xl border-8 border-yellow-900 overflow-hidden"
+         style="background-image: url('/mnt/data/A_fantasy-style_illustration_of_an_ancient_treasur.png');">
+
+      <!-- Marqueurs -->
+      <div class="absolute left-[30%] top-[40%] group cursor-pointer">
+        <div class="text-2xl">🏰</div>
+        <div class="absolute -top-10 left-1/2 -translate-x-1/2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded">
+          Château d’Écarlate
         </div>
       </div>
-  
-      <!-- Autres marqueurs... -->
-  
+
+      <div class="absolute left-[55%] top-[60%] group cursor-pointer">
+        <div class="text-2xl">🏔️</div>
+        <div class="absolute -top-10 left-1/2 -translate-x-1/2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded">
+          Montagnes Maudites
+        </div>
+      </div>
+
+      <div class="absolute left-[75%] top-[25%] group cursor-pointer">
+        <div class="text-2xl">🐉</div>
+        <div class="absolute -top-10 left-1/2 -translate-x-1/2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded">
+          Repaire du Dragon
+        </div>
+      </div>
+
+      <!-- Texture parchemin par-dessus (facultatif) -->
+      <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')] mix-blend-multiply opacity-30 pointer-events-none"></div>
     </div>
   </div>
-<script>
-    const markers = document.querySelectorAll('.marker');
-
-markers.forEach(marker => {
-  marker.addEventListener('click', () => {
-    const name = marker.dataset.name;
-    alert(`Tu as cliqué sur : ${name}`);
-    // Tu peux aussi ouvrir un panneau latéral, charger des infos...
-  });
-});
-
-</script>  
+</body>
+</html>
