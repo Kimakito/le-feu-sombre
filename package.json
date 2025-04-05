@@ -1,0 +1,12 @@
+{
+  "name": "le-feu-sombre",
+  "version": "1.0.0",
+  "main": "postcss.config.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/styles.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
