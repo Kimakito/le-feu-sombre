@@ -1,0 +1,28 @@
+<div class="relative w-full h-screen bg-yellow-100 flex items-center justify-center">
+    <div class="relative w-[1000px] h-[700px] bg-cover bg-center rounded-lg shadow-2xl border-8 border-yellow-900"
+         style="background-image: url('../../img-5.jpg');">
+         
+      <!-- Marqueurs ici -->
+      <div class="absolute left-[30%] top-[40%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group">
+        <div class="w-4 h-4 bg-red-600 rounded-full border-2 border-white shadow-lg animate-pulse"></div>
+        <div class="absolute top-[-40px] left-1/2 transform -translate-x-1/2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded">
+          Château noir
+        </div>
+      </div>
+  
+      <!-- Autres marqueurs... -->
+  
+    </div>
+  </div>
+<script>
+    const markers = document.querySelectorAll('.marker');
+
+markers.forEach(marker => {
+  marker.addEventListener('click', () => {
+    const name = marker.dataset.name;
+    alert(`Tu as cliqué sur : ${name}`);
+    // Tu peux aussi ouvrir un panneau latéral, charger des infos...
+  });
+});
+
+</script>  
