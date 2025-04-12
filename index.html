@@ -7,6 +7,7 @@
   <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body class="bg-bgdark text-lighttext flex items-center justify-center min-h-screen">
+  <div id="navbar"></div>
   <h1 class="text-4xl font-bold text-blue-600">Le feu Sombre</h1>
   <p>Kratès, l’ennemi des peuples libres, a subi une défaite inattendue au pied de la citadelle de Confluences. Il décide de regrouper ses forces à Kronstein,  capitale du Witlant et foyer de Saga, la reine du Nord. De là, il espère bien venir à bout des forces alliées, bien inférieures en nombre, et de soumettre le reste de l’humanité, qui viendra grossir son armée de “brûlés”. Mais l’Asteri déchu ne s’attend pas à ce que son ancienne famille ait bâti un scénario pour venir à bout de sa malice. Sofia, dernière souveraine des Asteri, n’a pas voulu tout révéler à Jehan lors de leur rencontre. Ce n’est qu’à la fin qu'il comprendra que son amnésie protège en réalité le plan élaboré depuis des siècles par le peuple des étoiles…</p>
    <!-- Slider SwiperJS -->
@@ -25,8 +26,17 @@
       <div class="swiper-pagination"></div>
     </div>
   </div>
+<div id="footer"></div>
+  <script> 
+     // Charger la navbar
+     fetch('./includes/navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
 
-  <script>
+    // Charger le footer
+    fetch('./includes/footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
     const swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,
       spaceBetween: 30,

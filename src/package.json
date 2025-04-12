@@ -1,3 +1,0 @@
-"scripts": {
-  "build:css": "tailwindcss -i ./src/styles.css -o ./dist/output.css --watch"
-}
