@@ -3,10 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon site avec Tailwind</title>
+  <title>Le Feu Sombre</title>
   <link href="/dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-  <h1 class="text-4xl font-bold text-blue-600">Hello Tailwind !</h1>
+<body class="bg-bgdark text-lighttext flex items-center justify-center min-h-screen">
+  <h1 class="text-4xl font-bold text-blue-600">Le feu Sombre</h1>
+  <p>Kratès, l’ennemi des peuples libres, a subi une défaite inattendue au pied de la citadelle de Confluences. Il décide de regrouper ses forces à Kronstein,  capitale du Witlant et foyer de Saga, la reine du Nord. De là, il espère bien venir à bout des forces alliées, bien inférieures en nombre, et de soumettre le reste de l’humanité, qui viendra grossir son armée de “brûlés”. Mais l’Asteri déchu ne s’attend pas à ce que son ancienne famille ait bâti un scénario pour venir à bout de sa malice. Sofia, dernière souveraine des Asteri, n’a pas voulu tout révéler à Jehan lors de leur rencontre. Ce n’est qu’à la fin qu'il comprendra que son amnésie protège en réalité le plan élaboré depuis des siècles par le peuple des étoiles…</p>
+   <!-- Slider SwiperJS -->
+   <div class="w-full max-w-4xl">
+    <div class="swiper mySwiper rounded-xl overflow-hidden">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide bg-[#2a1a40] text-white flex items-center justify-center text-xl font-bold p-8">Personnage 1</div>
+        <div class="swiper-slide bg-[#3b2460] text-white flex items-center justify-center text-xl font-bold p-8">Personnage 2</div>
+        <div class="swiper-slide bg-[#4d2e80] text-white flex items-center justify-center text-xl font-bold p-8">Personnage 3</div>
+        <div class="swiper-slide bg-[#5e3899] text-white flex items-center justify-center text-xl font-bold p-8">Personnage 4</div>
+        <div class="swiper-slide bg-[#6f42b1] text-white flex items-center justify-center text-xl font-bold p-8">Personnage 5</div>
+        <div class="swiper-slide bg-[#7f4cc9] text-white flex items-center justify-center text-xl font-bold p-8">Personnage 6</div>
+      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      effect: "coverflow",
+      coverflowEffect: {
+        rotate: 30,
+        slideShadows: false,
+        depth: 100,
+        modifier: 2,
+      },
+    });
+  </script>
 </body>
 </html>

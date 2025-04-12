@@ -1,8 +1,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Feu Sombre</title>
-    <link rel="icon" href="../assets/logo/dark_fire.png" type="image/x-icon">
+    <title><?php echo isset($title) ? $title : "Ikami"; ?></title>
+    <link rel="icon" href="/assets/images/logos/favicon.ico" type="image/x-icon">
     <link type="text/css" rel="preload" href="/assets/css/output.css?v=1.0" as="style" onload="this.rel='stylesheet'">
 
     <!-- Fonts -->
@@ -17,3 +17,12 @@
 
     <script src="/assets/js/utils.js"></script>
 </head>
+
+<!--
+//echo '<link rel="stylesheet" href="src/output.css?' . filemtime('src/output.css') . '">';
+//        echo '<img src=img/annonce/23572_1.jpg"?' . filemtime('src="img/annonce/23572_1.jpg"') . '" alt="Image">';
+//		
+//		ou 
+//			
+//	    $image_url = 'img/annonce/23572_1.jpg';
+//		echo '<img src="' . $image_url . '?' . filemtime($image_url) . '" alt="Image">';-->

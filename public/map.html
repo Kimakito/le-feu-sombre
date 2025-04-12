@@ -3,45 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carte Fantasy Interactive</title>
+  <title>Carte Fantasy</title>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("[data-label]").forEach(el => {
+        el.addEventListener("mouseenter", () => {
+          const tooltip = document.getElementById("tooltip");
+          tooltip.textContent = el.dataset.label;
+          tooltip.classList.remove("hidden");
+          tooltip.style.left = `${el.offsetLeft + 20}px`;
+          tooltip.style.top = `${el.offsetTop}px`;
+        });
+        el.addEventListener("mouseleave", () => {
+          document.getElementById("tooltip").classList.add("hidden");
+        });
+      });
+    });
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Uncial Antiqua', cursive;
-    }
-  </style>
 </head>
-<body class="bg-yellow-100">
-  <div class="relative w-full min-h-screen flex items-center justify-center p-4">
-    <div class="relative w-full max-w-5xl aspect-[16/9] bg-cover bg-center rounded-lg shadow-2xl border-8 border-yellow-900 overflow-hidden"
-         style="background-image: url('/mnt/data/A_fantasy-style_illustration_of_an_ancient_treasur.png');">
+<body class="bg-[#f5deb3] min-h-screen flex items-center justify-center">
+  <div class="relative w-full max-w-6xl aspect-[3/2] bg-cover bg-center border-4 border-black shadow-xl rounded-xl" style="background-image: url('/mnt/data/carte.jpg')">
+    <!-- Positionnements approximatifs à ajuster si besoin -->
+    <div class="absolute left-[72%] top-[8%] text-xs text-black font-semibold" data-label="Witlant">•</div>
+    <div class="absolute left-[75%] top-[15%] text-xs text-black font-semibold" data-label="Kronstein">•</div>
+    <div class="absolute left-[70%] top-[20%] text-xs text-black font-semibold" data-label="Opdal">•</div>
+    <div class="absolute left-[69%] top-[23%] text-xs text-black font-semibold" data-label="Norberg">•</div>
+    <div class="absolute left-[67%] top-[26%] text-xs text-black font-semibold" data-label="Traillorg">•</div>
+    <div class="absolute left-[45%] top-[12%] text-xs text-black font-semibold" data-label="Rocheville">•</div>
+    <div class="absolute left-[43%] top-[17%] text-xs text-black font-semibold" data-label="Confluence">•</div>
+    <div class="absolute left-[50%] top-[18%] text-xs text-black font-semibold" data-label="Fadall">•</div>
+    <div class="absolute left-[54%] top-[20%] text-xs text-black font-semibold" data-label="Neuvée">•</div>
+    <div class="absolute left-[58%] top-[21%] text-xs text-black font-semibold" data-label="Garde">•</div>
+    <div class="absolute left-[35%] top-[40%] text-xs text-black font-semibold" data-label="Rhonne">•</div>
+    <div class="absolute left-[40%] top-[50%] text-xs text-black font-semibold" data-label="Horizon">•</div>
+    <div class="absolute left-[25%] top-[60%] text-xs text-black font-semibold" data-label="Falaise">•</div>
+    <div class="absolute left-[28%] top-[20%] text-xs text-black font-semibold" data-label="Sofipol">•</div>
+    <div class="absolute left-[24%] top-[17%] text-xs text-black font-semibold" data-label="Kameor">•</div>
+    <div class="absolute left-[55%] top-[65%] text-xs text-black font-semibold" data-label="Bayron">•</div>
+    <div class="absolute left-[52%] top-[67%] text-xs text-black font-semibold" data-label="Lothomance">•</div>
+    <div class="absolute left-[49%] top-[69%] text-xs text-black font-semibold" data-label="ALO">•</div>
+    <div class="absolute left-[78%] top-[38%] text-xs text-black font-semibold" data-label="Marché de l'est européen">•</div>
+    <div class="absolute left-[83%] top-[55%] text-xs text-black font-semibold" data-label="Désert de l'Est">•</div>
+    <div class="absolute left-[60%] top-[82%] text-xs text-black font-semibold" data-label="A'A (rivière)">•</div>
+    <div class="absolute left-[27%] top-[30%] text-xs text-black font-semibold" data-label="Mer des âmes">•</div>
+    <div class="absolute left-[48%] top-[45%] text-xs text-black font-semibold" data-label="Pont des Disparus">•</div>
+    <div class="absolute left-[62%] top-[10%] text-xs text-black font-semibold" data-label="Massif de Vitir">^</div>
+    <div class="absolute left-[66%] top-[20%] text-xs text-black font-semibold" data-label="Massif de Valar">^</div>
 
-      <!-- Marqueurs -->
-      <div class="absolute left-[30%] top-[40%] group cursor-pointer">
-        <div class="text-2xl">🏰</div>
-        <div class="absolute -top-10 left-1/2 -translate-x-1/2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded">
-          Château d’Écarlate
-        </div>
-      </div>
-
-      <div class="absolute left-[55%] top-[60%] group cursor-pointer">
-        <div class="text-2xl">🏔️</div>
-        <div class="absolute -top-10 left-1/2 -translate-x-1/2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded">
-          Montagnes Maudites
-        </div>
-      </div>
-
-      <div class="absolute left-[75%] top-[25%] group cursor-pointer">
-        <div class="text-2xl">🐉</div>
-        <div class="absolute -top-10 left-1/2 -translate-x-1/2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded">
-          Repaire du Dragon
-        </div>
-      </div>
-
-      <!-- Texture parchemin par-dessus (facultatif) -->
-      <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/paper-fibers.png')] mix-blend-multiply opacity-30 pointer-events-none"></div>
-    </div>
+    <!-- Tooltip -->
+    <div id="tooltip" class="hidden absolute z-50 text-white text-sm bg-black bg-opacity-70 px-2 py-1 rounded shadow"></div>
   </div>
 </body>
 </html>

@@ -1,0 +1,37 @@
+<footer class="bg-black text-white px-5 md:px-28 py-8">
+    <section class="container mx-auto gap-12 border-b border-orange-500">
+        <div class="w-full flex justify-between">
+            <!--logo-->
+            <img class="min-w-[200px]" src="../assets/logo/dark_fire.png" alt="Logo Ikami" class="mb-4">
+        </div>
+
+            <div class="flex flex-wrap gap-5 md:gap-28">
+                <!-- Deuxième bloc : Navigation -->
+                <div class="">
+                    <h3 class="font-semibold sm:text-lg text-white">Navigation</h3>
+                    <div class="white-line-text py-2"></div>
+                    <div class="flex flex-wrap gap-5 md:gap-20">
+                        <ul class="text-sm space-y-2">
+                            <li><a href="/map" class="hover:text-white"><strong>La carte</strong></a></li>
+                            <li><a href="/personnages" class="hover:text-white">Les personnages</a></li>
+                            <li><a href="/univers" class="hover:text-white">l'univers</a></li>
+                            <li><a href="/contact" class="hover:text-white">Contactez-moi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Liens légaux -->
+        <div class="container mx-auto text-sm text-gray-400 border-t border-orange-500 p-6">
+            <p class="flex flex-wrap gap-4 items-center">
+                <a href="/politique-de-confidentialite" class="text-gray-400 hover:text-white"><?= $translations['footer']['legal_link_1_text'] ?></a>
+                <span class="text-orange-500">|</span>
+                <a href="/mentions-legales" class="text-gray-400 hover:text-white"><?= $translations['footer']['legal_link_2_text'] ?></a>
+                <span class="text-orange-500">|</span>
+                <a href="/conditions-generales-de-vente" class="text-gray-400 hover:text-white"><?= $translations['footer']['legal_link_3_text'] ?></a>
+                <span class="text-orange-500">|</span>
+                <a href="/conditions-generales-utilisation" class="text-gray-400 hover:text-white"><?= $translations['footer']['legal_link_4_text'] ?></a>
+            </p>
+    </section>
+</footer>
