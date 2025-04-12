@@ -1,5 +1,11 @@
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    "./src/**/*.{html,js}",
+    "./includes/**/*.{html,js}",
+    "./public/**/*.{html,js}",
+    "./assets/js/**/*.js",
+    "./index.html"
+  ],
   theme: {
     extend: {
       colors: {

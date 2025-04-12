@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "main": "postcss.config.js",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/styles.css -o ./dist/output.css --watch"
+    "build:css": "tailwindcss -i ./src/input.css -o ./assets/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^4.1.3"
+  }
 }
