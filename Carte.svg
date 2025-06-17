@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1924.2 1260.5">
+  <!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141)  -->
+  <defs>
+    <style>
+      .st0 {
+        filter: url(#drop-shadow-14);
+      }
+
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11, .st12, .st13, .st14, .st15, .st16, .st17, .st18, .st19, .st20, .st21, .st22, .st23, .st24, .st25, .st26, .st27 {
+        font-family: BaskervillePro-Regular, 'Baskerville Pro';
+      }
+
+      .st0, .st1, .st2, .st3, .st5, .st6, .st7, .st10, .st11, .st12, .st15, .st16, .st17, .st18, .st19, .st20, .st21, .st22, .st23, .st25, .st26, .st27 {
+        font-size: 16px;
+      }
+
+      .st1 {
+        filter: url(#drop-shadow-28);
+      }
+
+      .st1, .st6, .st16, .st18 {
+        fill: blue;
+      }
+
+      .st2 {
+        filter: url(#drop-shadow-5);
+      }
+
+      .st3 {
+        filter: url(#drop-shadow-6);
+      }
+
+      .st4 {
+        filter: url(#drop-shadow-24);
+      }
+
+      .st4, .st8, .st9, .st24 {
+        font-size: 24px;
+      }
+
+      .st5 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .st6 {
+        filter: url(#drop-shadow-26);
+      }
+
+      .st7 {
+        filter: url(#drop-shadow-22);
+      }
+
+      .st8 {
+        filter: url(#drop-shadow-3);
+      }
+
+      .st9 {
+        filter: url(#drop-shadow-23);
+      }
+
+      .st10 {
+        filter: url(#drop-shadow-7);
+      }
+
+      .st11 {
+        filter: url(#drop-shadow-4);
+      }
+
+      .st12 {
+        filter: url(#drop-shadow-16);
+      }
+
+      .st13 {
+        filter: url(#drop-shadow-11);
+      }
+
+      .st13, .st14 {
+        font-size: 21px;
+      }
+
+      .st14 {
+        filter: url(#drop-shadow-2);
+      }
+
+      .st15 {
+        filter: url(#drop-shadow-20);
+      }
+
+      .st16 {
+        filter: url(#drop-shadow-25);
+      }
+
+      .st17 {
+        filter: url(#drop-shadow-21);
+      }
+
+      .st18 {
+        filter: url(#drop-shadow-27);
+      }
+
+      .st19 {
+        filter: url(#drop-shadow-9);
+      }
+
+      .st20 {
+        filter: url(#drop-shadow-19);
+      }
+
+      .st21 {
+        filter: url(#drop-shadow-15);
+      }
+
+      .st22 {
+        filter: url(#drop-shadow-10);
+      }
+
+      .st23 {
+        filter: url(#drop-shadow-12);
+      }
+
+      .st24 {
+        filter: url(#drop-shadow-8);
+      }
+
+      .st25 {
+        filter: url(#drop-shadow-17);
+      }
+
+      .st26 {
+        filter: url(#drop-shadow-13);
+      }
+
+      .st27 {
+        filter: url(#drop-shadow-18);
+      }
+    </style>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur1" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur1" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-3" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur2" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-4" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur3" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur3" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-5" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur4" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur4" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-6" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur5" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur5" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-7" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur6" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur6" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-8" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur7" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur7" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-9" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur8" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur8" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-10" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur9" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur9" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-11" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur10" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur10" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-12" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur11" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur11" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-13" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur12" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur12" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-14" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur13" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur13" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-15" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur14" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur14" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-16" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur15" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur15" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-17" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur16" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur16" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-18" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur17" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur17" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-19" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur18" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur18" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-20" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur19" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur19" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-21" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur20" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur20" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-22" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur21" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur21" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-23" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur22" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur22" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-24" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur23" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur23" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-25" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur24" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur24" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-26" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur25" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur25" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-27" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur26" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur26" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-28" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur27" stdDeviation="5"/>
+      <feFlood flood-color="#000" flood-opacity=".8"/>
+      <feComposite in2="blur27" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Calque_1">
+    <image width="4482" height="2917" transform="translate(-8.4) scale(.4)" xlink:href="../../Documents/Carte Le Feu Sombre_sans noms.png"/>
+  </g>
+  <g id="Textes">
+    <text class="st5" transform="translate(543 346.8)"><tspan x="0" y="0">Sofipol</tspan></text>
+    <text class="st14" transform="translate(448.3 270.3)"><tspan x="0" y="0">Ile de Kameno</tspan></text>
+    <text class="st8" transform="translate(449 496.9)"><tspan x="0" y="0">Mer des Disparus</tspan></text>
+    <text class="st11" transform="translate(719.9 708.9)"><tspan x="0" y="0">Falaise</tspan></text>
+    <text class="st2" transform="translate(750.7 441.3)"><tspan x="0" y="0">Anse d’Arnor</tspan></text>
+    <text class="st3" transform="translate(848.4 225.4)"><tspan x="0" y="0">Rocheville</tspan></text>
+    <text class="st10" transform="translate(917 342.9)"><tspan x="0" y="0">Confluences</tspan></text>
+    <text class="st24" transform="translate(839.7 577.5)"><tspan x="0" y="0">Provinces</tspan></text>
+    <text class="st19" transform="translate(1157 259.9)"><tspan x="0" y="0">Lémenc</tspan></text>
+    <text class="st22" transform="translate(1308.3 200.3)"><tspan x="0" y="0">Trollvag</tspan></text>
+    <text class="st13" transform="translate(1144.6 178.6)"><tspan x="0" y="0">Vitir Valar</tspan></text>
+    <text class="st23" transform="translate(1507.3 255.7)"><tspan x="0" y="0">Opdal</tspan></text>
+    <text class="st26" transform="translate(1548.5 164)"><tspan x="0" y="0">Kronstein</tspan></text>
+    <text class="st0" transform="translate(1276.9 266)"><tspan x="0" y="0">Col du Clapier</tspan></text>
+    <text class="st21" transform="translate(1363.3 530.6)"><tspan x="0" y="0">Marche de Jorat - Ovenpass</tspan></text>
+    <text class="st12" transform="translate(1001.9 619.7)"><tspan x="0" y="0">Horizon</tspan></text>
+    <text class="st25" transform="translate(997.9 743.6)"><tspan x="0" y="0">Marais de Qoyan</tspan></text>
+    <text class="st27" transform="translate(1209.8 638)"><tspan x="0" y="0">La Chaume</tspan></text>
+    <text class="st20" transform="translate(1105.8 503.3)"><tspan x="0" y="0">Beauclair</tspan></text>
+    <text class="st15" transform="translate(1262.9 534.9)"><tspan x="0" y="0">Brion</tspan></text>
+    <text class="st17" transform="translate(866 471)"><tspan x="0" y="0">Rhonne</tspan></text>
+    <text class="st7" transform="translate(1202.3 929)"><tspan x="0" y="0">Tanaa</tspan></text>
+    <text class="st9" transform="translate(1122.5 1012.7)"><tspan x="0" y="0">GRANDE FORET</tspan></text>
+    <text class="st4" transform="translate(1637.6 717.2)"><tspan x="0" y="0">Déserts de l’Est</tspan></text>
+    <text class="st16" transform="translate(1113.5 705.4) rotate(-18.3)"><tspan x="0" y="0">Alon</tspan></text>
+    <text class="st6" transform="translate(1090.3 346.8) rotate(-18.3)"><tspan x="0" y="0">Neuvée</tspan></text>
+    <text class="st18" transform="translate(1042.3 305.6) rotate(-50.7)"><tspan x="0" y="0">Forchet</tspan></text>
+    <text class="st1" transform="translate(1132 396.4) rotate(-1.4)"><tspan x="0" y="0">Garde</tspan></text>
+  </g>
+</svg>

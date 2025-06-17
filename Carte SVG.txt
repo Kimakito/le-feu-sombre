@@ -1,0 +1,91 @@
+Tu sais pour ta carte ? 
+J'ai besoin que tu fasses la partie Illustrator de ça :
+
+si tu fais ta carte dans Illustrator et que tu veux qu’elle soit interactive et responsive, le plus simple et le plus propre est de tout intégrer directement dans le fichier SVG, y compris les noms de ville et les zones interactives.
+
+
+---
+
+Donc : OUI, crée les noms de ville directement dans Illustrator.
+
+Mais avec quelques précautions pour que ça fonctionne bien sur le web.
+
+
+---
+
+Méthode propre pour que ça marche avec Illustrator :
+
+1. Crée tout dans Illustrator
+
+La carte de fond (image, tracés, etc.)
+
+Les noms de villes avec l'outil texte
+
+Les icônes ou points (cercles, symboles...)
+
+
+2. Nommer les éléments
+
+Dans le panneau calques, donne un nom à chaque ville (id="eldoria", id="valdun", etc.)
+
+Tu pourras les cibler facilement en CSS / JS ensuite
+
+
+3. Exporter en SVG
+
+Fichier > Exporter > Exporter sous... > Format : SVG
+
+Dans les options :
+
+Conserver les balises (<text>, <path>, etc.)
+
+Polices : convertir en contours ou embarquer la police (selon compatibilité)
+
+Décoche les options de style CSS séparé (intégré c’est plus simple au début)
+
+
+
+4. Intégrer le SVG dans ton HTML
+
+Pas avec <img> ni <object>, mais copier-coller le code SVG directement dans ton HTML
+
+Tu pourras alors styler et interagir avec les villes en JS/CSS sans problème
+
+
+
+---
+
+Exemple simple :
+
+Dans Illustrator, tu crées un texte "Eldoria", que tu nommes ville-eldoria.
+
+Tu exportes, et dans le SVG tu as :
+
+<text id="ville-eldoria" x="200" y="150">Eldoria</text>
+
+Et dans ton CSS/JS :
+
+#ville-eldoria:hover {
+  fill: gold;
+  cursor: pointer;
+}
+
+document.getElementById('ville-eldoria').addEventListener('click', () => {
+  alert('Bienvenue à Eldoria !');
+});
+
+
+---
+
+Bonus : rendre la carte responsive
+
+Ajoute ces styles :
+
+svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+Et assure-toi que ton viewBox est bien défini dans le SVG.
