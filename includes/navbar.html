@@ -1,79 +1,34 @@
-<!-- Navbar -->
-<nav id="navbar"
-    class="bg-white text-bgdark shadow-md transition-all duration-300 ease-in-out px-6 py-6 lg:px-10 lg:py-10 h-[123px] rounded-bl-2xl rounded-br-2xl flex items-center justify-between font-semibold">
+<header>
+    <nav id="navbar"
+        class="navbar-flame-animated fixed top-0 left-0 w-full bg-feu-dark text-neutre-light shadow-xl transition-all duration-300 ease-in-out px-6 py-6 lg:px-10 h-[123px] rounded-bl-3xl rounded-br-3xl flex items-center justify-between z-50">
 
-    <!-- Menu burger (mobile) -->
-    <button id="burgerMenu" aria-label="Menu" class="lg:hidden focus:outline-none">
-        <svg class="w-8 h-8 text-bgdark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-    </button>
+        <button id="burgerMenu" aria-label="Menu" class="lg:hidden focus:outline-none p-2">
+            <svg class="w-8 h-8 text-neutre-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
 
-    <!-- Liens de gauche -->
-    <ul class="hidden lg:flex gap-6 items-center text-base">
-        <li><a href="/map" class="page hover:text-accent transition">La carte</a></li>
-        <li><a href="#characters" class="page hover:text-accent transition">Les personnages</a></li>
-        <li><a href="#universe" class="page hover:text-accent transition">L'univers</a></li>
-    </ul>
+        <ul class="hidden lg:flex gap-10 items-center text-lg">
+            <li><a href="/public/map.html" class="hover:text-feu-light transition-colors duration-300">La carte</a></li>
+            <li><a href="#characters" class="hover:text-feu-light transition-colors duration-300">Les personnages</a></li>
+            <li><a href="#universe" class="hover:text-feu-light transition-colors duration-300">L'univers</a></li>
+        </ul>
 
-    <!-- Logo au centre -->
-    <a href="/" class="flex justify-center flex-grow">
-        <img id="logo" src="../assets/logo/dark_fire.png" alt="Logo" class="h-12 md:h-16 transition-all duration-300">
-    </a>
+        <a href="/" class="flex justify-center flex-grow lg:flex-grow-0">
+            <img id="logo" src="../assets/logo/dark_fire.png" alt="Logo Le Feu Sombre" class="h-16 md:h-20 transition-all duration-300">
+        </a>
 
-    <!-- Liens de droite -->
-    <ul class="hidden lg:flex gap-4 items-center text-base">
-        <li><a href="#contact" class="page hover:text-accent transition">Contactez-moi</a></li>
-    </ul>
-</nav>
+        <ul class="hidden lg:flex gap-10 items-center text-lg">
+            <li><a href="#contact" class="hover:text-feu-light transition-colors duration-300">Contactez-moi</a></li>
+        </ul>
+    </nav>
 
-<!-- Menu mobile -->
-<div id="mobileMenu"
-    class="lg:hidden hidden flex flex-col gap-4 bg-white px-6 py-4 mt-[123px] shadow-md rounded-b-2xl text-bgdark font-semibold text-lg z-40">
-    <a href="/map" class="page hover:text-accent">La carte</a>
-    <a href="/personnages" class="page hover:text-accent">Les personnages</a>
-    <a href="/univers" class="page hover:text-accent">L'univers</a>
-    <a href="/contact" class="page hover:text-accent">Contactez-moi</a>
-</div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const navbar = document.getElementById("navbar");
-        const logo = document.getElementById("logo");
-        const burgerMenu = document.getElementById("burgerMenu");
-        const mobileMenu = document.getElementById("mobileMenu");
-
-        function handleScroll() {
-            if (window.scrollY > 50) {
-                navbar.classList.add("h-[70px]", "py-4", "text-sm", "shadow-lg");
-                navbar.classList.remove("h-[123px]", "py-10");
-                logo.classList.add("h-8", "md:h-10");
-                logo.classList.remove("h-12", "md:h-16");
-                document.body.style.paddingTop = "70px";
-            } else {
-                navbar.classList.add("h-[123px]", "py-10");
-                navbar.classList.remove("h-[70px]", "py-4", "text-sm", "shadow-lg");
-                logo.classList.add("h-12", "md:h-16");
-                logo.classList.remove("h-8", "md:h-10");
-                document.body.style.paddingTop = "123px";
-            }
-        }
-
-        handleScroll();
-        window.addEventListener("scroll", handleScroll);
-
-        burgerMenu.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-        });
-
-        // Active le lien de la page courante
-        const links = document.querySelectorAll(".page");
-        const currentPath = window.location.pathname;
-
-        links.forEach(link => {
-            if (link.getAttribute("href") === currentPath) {
-                link.classList.add("text-accent");
-            }
-        });
-    });
-</script>
+    <div id="mobileMenu"
+        class="navbar-flame-animated fixed top-[123px] left-0 w-full lg:hidden hidden flex-col gap-4 bg-feu-dark px-6 py-6 shadow-xl rounded-b-3xl text-neutre-light text-xl font-semibold z-40 transition-all duration-300 ease-in-out">
+        <a href="/public/map.html" class="block py-2 hover:text-feu-light transition-colors duration-300">La carte</a>
+        <a href="#characters" class="block py-2 hover:text-feu-light transition-colors duration-300">Les personnages</a>
+        <a href="#universe" class="block py-2 hover:text-feu-light transition-colors duration-300">L'univers</a>
+        <a href="#contact" class="block py-2 hover:text-feu-light transition-colors duration-300">Contactez-moi</a>
+    </div>
+</header>

@@ -1,3 +1,34 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* src/input.css (ou votre main CSS entry point) */
+
+/* Import Google Fonts FIRST. This should be a direct link in your HTML <head> for better performance. */
+/* For CSS import, it looks like this: */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+ @tailwind base; 
+ @tailwind components; 
+ @tailwind utilities;
+
+/* --- Custom CSS Variables (Optional but good practice) --- */
+:root {
+  /* Vos couleurs personnalisées comme variables CSS pour l'utilisation dans les animations */
+  --feu-light: #f6e05e; /* jaune ambré */
+  --feu-primary: #dd6b20; /* orange profond */
+  --feu-dark: #c53030; /* rouge sombre */
+  --roi-primary: #1a202c; /* bleu très profond */
+  --font-im-fell: 'IM Fell English SC', serif; /* Votre variable de police personnalisée */
+}
+
+/* --- Animations de Flammes pour la Navbar --- */
+
+/* Keyframes pour l'animation de flamme - PLUS FLUIDE */
+
+
+/* Styles pour la navbar animée */
+/* .navbar-flame-animated {
+  background-size: 200% 200%; /* Important pour que le dégradé ait de la place pour bouger 
+  animation: flameAnimation 20s ease-in-out infinite alternate; Durée plus longue, fonction de temporisation ajustée
+  Vous pouvez aussi essayer une custom-timing-function pour encore plus de contrôle:
+  animation: flameAnimation 20s cubic-bezier(0.42, 0, 0.58, 1) infinite alternate;
+} */
+
+/* --- Fin des Animations de Flammes --- */

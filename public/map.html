@@ -1,58 +1,452 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carte Fantasy</title>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll("[data-label]").forEach(el => {
-        el.addEventListener("mouseenter", () => {
-          const tooltip = document.getElementById("tooltip");
-          tooltip.textContent = el.dataset.label;
-          tooltip.classList.remove("hidden");
-          tooltip.style.left = `${el.offsetLeft + 20}px`;
-          tooltip.style.top = `${el.offsetTop}px`;
-        });
-        el.addEventListener("mouseleave", () => {
-          document.getElementById("tooltip").classList.add("hidden");
-        });
-      });
-    });
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-[#f5deb3] min-h-screen flex items-center justify-center">
-  <div class="relative w-full max-w-6xl aspect-[3/2] bg-cover bg-center border-4 border-black shadow-xl rounded-xl" style="background-image: url('/mnt/data/carte.jpg')">
-    <!-- Positionnements approximatifs à ajuster si besoin -->
-    <div class="absolute left-[72%] top-[8%] text-xs text-black font-semibold" data-label="Witlant">•</div>
-    <div class="absolute left-[75%] top-[15%] text-xs text-black font-semibold" data-label="Kronstein">•</div>
-    <div class="absolute left-[70%] top-[20%] text-xs text-black font-semibold" data-label="Opdal">•</div>
-    <div class="absolute left-[69%] top-[23%] text-xs text-black font-semibold" data-label="Norberg">•</div>
-    <div class="absolute left-[67%] top-[26%] text-xs text-black font-semibold" data-label="Traillorg">•</div>
-    <div class="absolute left-[45%] top-[12%] text-xs text-black font-semibold" data-label="Rocheville">•</div>
-    <div class="absolute left-[43%] top-[17%] text-xs text-black font-semibold" data-label="Confluence">•</div>
-    <div class="absolute left-[50%] top-[18%] text-xs text-black font-semibold" data-label="Fadall">•</div>
-    <div class="absolute left-[54%] top-[20%] text-xs text-black font-semibold" data-label="Neuvée">•</div>
-    <div class="absolute left-[58%] top-[21%] text-xs text-black font-semibold" data-label="Garde">•</div>
-    <div class="absolute left-[35%] top-[40%] text-xs text-black font-semibold" data-label="Rhonne">•</div>
-    <div class="absolute left-[40%] top-[50%] text-xs text-black font-semibold" data-label="Horizon">•</div>
-    <div class="absolute left-[25%] top-[60%] text-xs text-black font-semibold" data-label="Falaise">•</div>
-    <div class="absolute left-[28%] top-[20%] text-xs text-black font-semibold" data-label="Sofipol">•</div>
-    <div class="absolute left-[24%] top-[17%] text-xs text-black font-semibold" data-label="Kameor">•</div>
-    <div class="absolute left-[55%] top-[65%] text-xs text-black font-semibold" data-label="Bayron">•</div>
-    <div class="absolute left-[52%] top-[67%] text-xs text-black font-semibold" data-label="Lothomance">•</div>
-    <div class="absolute left-[49%] top-[69%] text-xs text-black font-semibold" data-label="ALO">•</div>
-    <div class="absolute left-[78%] top-[38%] text-xs text-black font-semibold" data-label="Marché de l'est européen">•</div>
-    <div class="absolute left-[83%] top-[55%] text-xs text-black font-semibold" data-label="Désert de l'Est">•</div>
-    <div class="absolute left-[60%] top-[82%] text-xs text-black font-semibold" data-label="A'A (rivière)">•</div>
-    <div class="absolute left-[27%] top-[30%] text-xs text-black font-semibold" data-label="Mer des âmes">•</div>
-    <div class="absolute left-[48%] top-[45%] text-xs text-black font-semibold" data-label="Pont des Disparus">•</div>
-    <div class="absolute left-[62%] top-[10%] text-xs text-black font-semibold" data-label="Massif de Vitir">^</div>
-    <div class="absolute left-[66%] top-[20%] text-xs text-black font-semibold" data-label="Massif de Valar">^</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carte Fantasy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
 
-    <!-- Tooltip -->
-    <div id="tooltip" class="hidden absolute z-50 text-white text-sm bg-black bg-opacity-70 px-2 py-1 rounded shadow"></div>
-  </div>
-</body>
+    <style>
+      svg text {
+        font-family: 'IM Fell English SC', serif;
+        cursor: pointer;
+        transition: fill 0.2s ease;
+        fill: white;
+        stroke: black;
+        stroke-width: 2;
+        paint-order: stroke;
+      }
+      svg text:hover {
+        fill: #e6592e;
+      }
+      .info {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .tooltip {
+        @apply absolute bg-black text-white text-sm px-2 py-1 rounded z-50 pointer-events-none;
+        transition: opacity 0.2s;
+      }
+    </style>
+  </head>
+  <body class="text-neutre-light font-fell">
+    <div class="relative w-full bg-roi-primary">
+      <!-- Image de fond -->
+      <img
+        src="/assets/images/Carte Le Feu Sombre_sans noms.png"
+        alt="Carte"
+        class="w-full h-auto block"
+      />
+
+      <!-- Calque SVG par-dessus -->
+      <div class="absolute top-0 left-0 w-full h-full">
+        <svg
+          id="Calque_1"
+          data-name="Calque 1"
+          width="100%"
+          height="100%"
+          preserveAspectRatio="xMidYMid meet"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 1924.2 1260.5"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                letter-spacing: -0.09em;
+              }
+
+              .cls-2 {
+                letter-spacing: 0em;
+              }
+
+              .cls-3 {
+                letter-spacing: 0em;
+              }
+
+              .cls-4 {
+                letter-spacing: -0.07em;
+              }
+
+              .cls-5 {
+                letter-spacing: 0em;
+              }
+
+              .cls-6 {
+                font-size: 25px;
+                font-weight: 900;
+                fill: #fdf3e7;
+                stroke: #000000;
+                stroke-miterlimit: 10;
+                stroke-width: 3;
+                paint-order: stroke;                
+                cursor: pointer;
+              }
+
+              .cls-6:hover {
+                cursor: pointer;
+              }
+
+              .cls-6,
+              .cls-7 {
+                isolation: isolate;
+              }
+
+              .cls-8 {
+                letter-spacing: 0em;
+              }
+
+              .cls-9 {
+                letter-spacing: -0.06em;
+              }
+
+              .cls-10 {
+                letter-spacing: 0em;
+              }
+
+              .cls-11 {
+                letter-spacing: -0.08em;
+              }
+
+              .cls-12 {
+                letter-spacing: -0.05em;
+              }
+
+              .cls-13 {
+                letter-spacing: -0.01em;
+              }
+
+              .cls-14 {
+                letter-spacing: 0em;
+              }
+
+              .cls-15 {
+                letter-spacing: -0.02em;
+              }
+
+              .cls-16 {
+                letter-spacing: -0.08em;
+              }
+
+              .cls-17 {
+                letter-spacing: 0em;
+              }
+
+              .cls-18 {
+                letter-spacing: -0.01em;
+              }
+
+              .cls-19 {
+                letter-spacing: 0.01em;
+              }
+
+              .cls-20 {
+                letter-spacing: -0.01em;
+              }
+
+              .cls-21 {
+                letter-spacing: -0.02em;
+              }
+
+              .cls-22 {
+                letter-spacing: 0.01em;
+              }
+
+              .cls-23 {
+                letter-spacing: 0.01em;
+              }
+
+              .cls-24 {
+                letter-spacing: -0.02em;
+              }
+
+              .cls-25 {
+                letter-spacing: -0.09em;
+              }
+
+              .cls-26 {
+                letter-spacing: -0.02em;
+              }
+
+              .cls-27 {
+                letter-spacing: -0.03em;
+              }
+
+              .cls-28 {
+                letter-spacing: 0em;
+              }
+
+              .cls-29 {
+                letter-spacing: 0.01em;
+              }
+
+              .cls-30 {
+                letter-spacing: -0.02em;
+              }
+
+              .cls-31 {
+                letter-spacing: 0em;
+              }
+
+              .cls-32 {
+                letter-spacing: 0em;
+              }
+
+              .cls-33 {
+                letter-spacing: 0em;
+              }
+
+              .cls-34 {
+                letter-spacing: 0em;
+              }
+            </style>
+          </defs>
+          <filter id="text-bg-blur" x="-30%" y="-30%" width="160%" height="160%">
+            <feFlood flood-color="white" flood-opacity="0.85" result="flood" />
+            <feComposite in="flood" in2="SourceAlpha" operator="in" result="mask" />
+            <feGaussianBlur in="mask" stdDeviation="4.5" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <g id="Calque_1-2" data-name="Calque 1">
+            <image
+              class="cls-7"
+              width="4482"
+              height="2917"
+              transform="scale(.43)"
+              xlink:href="Carte Le Feu Sombre_sans noms.png"
+            />
+          </g>
+          <g class="cls-7">
+            <text id="sofipol" class="cls-6" filter="url(#text-bg-blur)" transform="translate(543 346.8)">
+              <tspan x="0" y="0">Sofipol</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(448.3 270.3)">
+              <tspan x="0" y="0">Ile de Kameno</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(449 496.9)">
+              <tspan x="0" y="0">Mer des Disparus</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(719.9 708.9)">
+              <tspan class="cls-4" x="0" y="0">Falaise</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(750.7 441.3)">
+              <tspan x="0" y="0">Anse d'Arnor</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(848.4 225.4)">
+              <tspan class="cls-32" x="0" y="0">Rocheville</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(917 342.9)">
+              <tspan x="0" y="0">Confluences</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(839.7 577.5)">
+              <tspan x="0" y="0">Provinces</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1157 259.9)">
+              <tspan x="0" y="0">Lémenc</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1308.3 200.3)">
+              <tspan class="cls-11" x="0" y="0">Trollvag</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1144.6 178.6)">
+              <tspan class="cls-12" x="0" y="0">Vitir Valar</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1507.3 255.7)">
+              <tspan x="0" y="0">Opdal</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1548.5 164)">
+              <tspan x="0" y="0">Kronstein</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1276.9 266)">
+              <tspan x="0" y="0">Col du Clapier</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1363.3 530.6)">
+              <tspan x="0" y="0">Marche de Jorat - OvenPass</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1001.9 619.7)">
+              <tspan x="0" y="0">Horizon</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(997.9 743.6)">
+              <tspan x="0" y="0">Marais de Qoyan</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1209.8 638)">
+              <tspan x="0" y="0">La Chaume</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1105.8 503.3)">
+              <tspan x="0" y="0">Beauclair</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1262.9 534.9)">
+              <tspan x="0" y="0">Brion</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(866 471)">
+              <tspan x="0" y="0">Rhonne</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1202.3 929)">
+              <tspan class="cls-1" x="0" y="0">Tanaa</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1122.5 1012.7)">
+              <tspan x="0" y="0">Grande Forêt</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1637.6 717.2)">
+              <tspan x="0" y="0">Déserts de l'Est</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text
+              class="cls-6" filter="url(#text-bg-blur)"
+              transform="translate(1113.5 705.4) rotate(-18.3)"
+            >
+              <tspan x="0" y="0">Alon</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text
+              class="cls-6" filter="url(#text-bg-blur)"
+              transform="translate(1090.3 346.8) rotate(-18.3)"
+            >
+              <tspan class="cls-27" x="0" y="0">Neuvée</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text
+              class="cls-6" filter="url(#text-bg-blur)"
+              transform="translate(1042.3 305.6) rotate(-50.7)"
+            >
+              <tspan class="cls-9" x="0" y="0">Forchet</tspan>
+            </text>
+          </g>
+          <g class="cls-7">
+            <text class="cls-6" filter="url(#text-bg-blur)" transform="translate(1132 396.4) rotate(-1.4)">
+              <tspan x="0" y="0">Garde</tspan>
+            </text>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div id="tooltip" class="tooltip hidden"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const hoverTexts = {
+    Sofipol: "Capitale administrative",
+    Falaise: "Lieu escarpé",
+    Rocheville: "Cité fortifiée",
+    Confluences: "Centre culturel",
+    Provinces: "Région étendue",
+    Lémenc: "Ville marchande",
+    Trollvag: "Territoire barbare",
+    Tanaa: "Capitale Sylvaine",
+    "La Chaume": "Village paisible",
+    Kronstein: "Forteresse du Nord",
+  };
+
+  const links = {
+    Sofipol: "https://exemple.com/sofipol",
+    "Ile de Kameno": "https://exemple.com/kameno",
+    Confluences: "https://exemple.com/confluences",
+    // etc.
+  };
+
+  const tooltip = document.getElementById("tooltip");
+
+  document.querySelectorAll("svg .cls-6").forEach(el => {
+    const name = el.textContent.trim();
+    const label = hoverTexts[name] || name; // fallback au nom
+    const url = links[name];
+
+    el.addEventListener("mouseenter", e => {
+      tooltip.textContent = label;
+      tooltip.classList.remove("hidden");
+      tooltip.style.opacity = 1;
+    });
+
+    el.addEventListener("mousemove", e => {
+      tooltip.style.left = e.pageX + 10 + "px";
+      tooltip.style.top = e.pageY - 20 + "px";
+    });
+
+    el.addEventListener("mouseleave", () => {
+      tooltip.classList.add("hidden");
+      tooltip.style.opacity = 0;
+    });
+
+    if (url) {
+      el.style.cursor = "pointer";
+      el.addEventListener("click", () => window.open(url, "_blank"));
+    }
+  });
+});
+</script>
+
+<style>
+.tooltip {
+  position: absolute;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 4px;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.1s ease-in-out;
+  font-size: 0.875rem;
+  z-index: 1000;
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+</style>
+
+  </body>
 </html>

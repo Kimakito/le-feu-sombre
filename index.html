@@ -1,277 +1,211 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head id="head"></head>
-  <body class="bg-bgdark text-lighttext min-h-screen">
-    <div id="navbar"></div>
-    <main class="flex flex-col justify-between min-h-screen py-16 px-6">
-      <!-- Titre imposant avec dégradé uniquement sur le texte -->
-      <h1
-        class="text-6xl sm:text-7xl font-bold bg-gradient-to-r from-blue-800 via-orange-500 to-indigo-600 inline-block text-transparent bg-clip-text text-center"
-      >
-        Le Feu Sombre
-      </h1>
+  <head id="head"> 
+    <title>Le Feu Sombre</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Feu Sombre</title>
+    <link rel="icon" href="./assets/logo/dark_fire.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/output.css" />
+    <!-- Fonts -->
+    <link rel="stylesheet" href="./assets/icomoon/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./src/main.js" defer></script>
+  </head>
+  <body class="bg-roi-primary text-neutre-light font-fell">
 
-      <!-- Description -->
-      <p
-        class="text-lg sm:text-xl text-white text-center mt-6 max-w-3xl mx-auto py-10"
-      >
-        Kratès, l’ennemi des peuples libres, a subi une défaite inattendue au
-        pied de la citadelle de Confluences. Il décide de regrouper ses forces à
-        Kronstein, capitale du Witlant et foyer de Saga, la reine du Nord. De
-        là, il espère bien venir à bout des forces alliées, bien inférieures en
-        nombre, et de soumettre le reste de l’humanité, qui viendra grossir son
-        armée de “brûlés”. Mais l’Asteri déchu ne s’attend pas à ce que son
-        ancienne famille ait bâti un scénario pour venir à bout de sa malice.
-        Sofia, dernière souveraine des Asteri, n’a pas voulu tout révéler à
-        Jehan lors de leur rencontre. Ce n’est qu’à la fin qu'il comprendra que
-        son amnésie protège en réalité le plan élaboré depuis des siècles par le
-        peuple des étoiles…
-      </p>
+    <nav id="navbar"
+        class="navbar-flame-animated fixed top-0 left-0 w-full text-neutre-light shadow-xl transition-all duration-300 ease-in-out px-6 py-6 lg:px-10 h-[123px] flex items-center justify-between shadow-xl z-50">
 
-      <h2
-        class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-800 via-orange-500 to-indigo-600 inline-block text-transparent bg-clip-text text-center py-10"
-        id="characters"
-      >
-        Les personnages
-      </h2>
-      <!-- Slider SwiperJS -->
-      <div class="w-full max-w-4xl mt-12 mx-auto py-10">
-        <div class="swiper mySwiper rounded-xl overflow-hidden">
-          <div class="swiper-wrapper">
-            <div
-              class="swiper-slide bg-[#3b2a58] text-white flex flex-col items-center justify-center p-8"
-            >
-              <img
-                src="./assets/sticker-minion-content.png"
-                alt="Image personnage 1"
-                class="w-full h-auto rounded-lg mb-4"
-              />
-              <h2 class="text-xl font-semibold">Personnage 1</h2>
-              <p class="text-base text-center text-white mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                ac purus at odio interdum tincidunt. Nulla facilisi. Integer sit
-                amet eros ut arcu vehicula tristique.
-              </p>
-            </div>
-            <div
-              class="swiper-slide bg-[#3b2a58] text-white flex flex-col items-center justify-center p-8"
-            >
-              <img
-                src="./assets/sticker-minion-content.png"
-                alt="Image personnage 1"
-                class="w-full h-auto rounded-lg mb-4"
-              />
-              <h2 class="text-xl font-semibold">Personnage 2</h2>
-              <p class="text-base text-center text-white mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                ac purus at odio interdum tincidunt. Nulla facilisi. Integer sit
-                amet eros ut arcu vehicula tristique.
-              </p>
-            </div>
-            <div
-              class="swiper-slide bg-[#3b2a58] text-white flex flex-col items-center justify-center p-8"
-            >
-              <img
-                src="./assets/sticker-minion-content.png"
-                alt="Image personnage 1"
-                class="w-full h-auto rounded-lg mb-4"
-              />
-              <h2 class="text-xl font-semibold">Personnage 3</h2>
-              <p class="text-base text-center text-white mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                ac purus at odio interdum tincidunt. Nulla facilisi. Integer sit
-                amet eros ut arcu vehicula tristique.
-              </p>
-            </div>
-            <div
-              class="swiper-slide bg-[#3b2a58] text-white flex flex-col items-center justify-center p-8"
-            >
-              <img
-                src="./assets/sticker-minion-content.png"
-                alt="Image personnage 1"
-                class="w-full h-auto rounded-lg mb-4"
-              />
-              <h2 class="text-xl font-semibold">Personnage 4</h2>
-              <p class="text-base text-center text-white mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                ac purus at odio interdum tincidunt. Nulla facilisi. Integer sit
-                amet eros ut arcu vehicula tristique.
-              </p>
-            </div>
-            <div
-              class="swiper-slide bg-[#3b2a58] text-white flex flex-col items-center justify-center p-8"
-            >
-              <img
-                src="./assets/sticker-minion-content.png"
-                alt="Image personnage 1"
-                class="w-full h-auto rounded-lg mb-4"
-              />
-              <h2 class="text-xl font-semibold">Personnage 5</h2>
-              <p class="text-base text-center text-white mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                ac purus at odio interdum tincidunt. Nulla facilisi. Integer sit
-                amet eros ut arcu vehicula tristique.
-              </p>
-            </div>
-            <div
-              class="swiper-slide bg-[#3b2a58] text-white flex flex-col items-center justify-center p-8"
-            >
-              <img
-                src="./assets/sticker-minion-content.png"
-                alt="Image personnage 1"
-                class="w-full h-auto rounded-lg mb-4"
-              />
-              <h2 class="text-xl font-semibold">Personnage 6</h2>
-              <p class="text-base text-center text-white mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                ac purus at odio interdum tincidunt. Nulla facilisi. Integer sit
-                amet eros ut arcu vehicula tristique.
-              </p>
-            </div>
-          </div>
-          <!-- Pagination -->
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-      <section></section>
-      <h2
-        class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-800 via-orange-500 to-indigo-600 inline-block text-transparent bg-clip-text text-center py-10"
-        id="universe"
-      >
-        L'univers
-      </h2>
-      <p
-        class="text-lg sm:text-xl text-white text-center mt-6 max-w-3xl mx-auto"
-      >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo maxime
-        fugit quis asperiores. Pariatur doloremque cumque recusandae nemo
-        laboriosam! Vel velit quasi laborum nisi officiis ipsum sint quia
-        possimus similique. Reiciendis, cupiditate libero ratione molestias hic
-        veritatis exercitationem. Illum vitae sed excepturi, deserunt repellat
-        tempora maiores corporis dolorem, obcaecati, nesciunt dolores totam vel
-        in nostrum alias inventore corrupti nam! Libero. Dolore quisquam
-        perferendis delectus doloribus quos tempora error rerum? Earum,
-        repellendus doloremque consequuntur veritatis ex autem iusto nisi
-        distinctio aperiam non eveniet iure culpa suscipit quidem tempora
-        accusamus sequi quo. Totam impedit alias doloribus eaque numquam cumque
-        beatae quidem, porro nobis optio repudiandae doloremque quam autem harum
-        magni. Fugit fugiat iste est optio odio ex autem architecto sit quos
-        maiores. Numquam vero cupiditate minima labore perspiciatis consequuntur
-        cum explicabo, excepturi iste provident, ratione hic. Exercitationem
-        nostrum, voluptatem est perspiciatis iste ipsum, veritatis porro
-        suscipit numquam provident itaque doloremque, modi enim.
-      </p>
-    </main>
-    <article
-      id="contact"
-      class="bg-pale-gradient flex flex-wrap items-center justify-center gap-7 rounded-lg px-5 md:px-28 py-8 md:py-10"
-    >
-      <section
-        class="bg-yellow-gradient rounded-lg shadow-lg p-8 w-full max-w-xl"
-      >
-        <h2 class="text-4xl font-bold text-white text-center py-7">
-          Me contacter
-        </h2>
-        <form action="#" method="POST" class="flex flex-col gap-5">
-          <!-- Nom -->
-          <div>
-            <label for="name" class="block text-lg font-medium text-white"
-              >Nom</label
-            >
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              class="mt-1 block w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
-          </div>
+        <button id="burgerMenu" aria-label="Menu" class="lg:hidden focus:outline-none p-2">
+            <svg class="w-8 h-8 text-neutre-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
 
-          <!-- Prénom -->
-          <div>
-            <label for="prenom" class="block text-lg font-medium text-white"
-              >Prénom</label
-            >
-            <input
-              type="text"
-              id="prenom"
-              name="prenom"
-              required
-              class="mt-1 block w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
-          </div>
+        <ul class="hidden lg:flex gap-10 items-center text-lg">
+            <li><a href="/public/map.html" class="hover:text-feu-light transition-colors duration-300">La carte</a></li>
+            <li><a href="#characters" class="hover:text-feu-light transition-colors duration-300">Les personnages</a></li>
+            <li><a href="#universe" class="hover:text-feu-light transition-colors duration-300">L'univers</a></li>
+        </ul>
 
-          <!-- Email -->
-          <div>
-            <label for="email" class="block text-lg font-medium text-white"
-              >Email</label
-            >
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              class="mt-1 block w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
-          </div>
+        <a href="/" class="flex justify-center flex-grow lg:flex-grow-0">
+            <img id="logo" src="./assets/logo/dark_fire.png" alt="Logo Le Feu Sombre" class="h-16 md:h-20 transition-all duration-300">
+        </a>
 
-          <!-- Sujet -->
-          <div>
-            <label for="subject" class="block text-lg font-medium text-white"
-              >Sujet</label
-            >
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              required
-              class="mt-1 block w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
-          </div>
+        <ul class="hidden lg:flex gap-10 items-center text-lg">
+            <li><a href="#contact" class="hover:text-feu-light transition-colors duration-300">Contactez-moi</a></li>
+        </ul>
+    </nav>
+    <div id="mobileMenu"
+        class="navbar-flame-animated fixed top-[123px] left-0 w-full lg:hidden hidden flex-col gap-4 bg-feu-dark px-6 py-6 shadow-xl rounded-b-3xl text-neutre-light text-xl font-semibold z-40 transition-all duration-300 ease-in-out">
+        <a href="/public/map.html" class="block py-2 hover:text-feu-light transition-colors duration-300">La carte</a>
+        <a href="#characters" class="block py-2 hover:text-feu-light transition-colors duration-300">Les personnages</a>
+        <a href="#universe" class="block py-2 hover:text-feu-light transition-colors duration-300">L'univers</a>
+        <a href="#contact" class="block py-2 hover:text-feu-light transition-colors duration-300">Contactez-moi</a>
+    </div>
 
-          <!-- Message -->
-          <div>
-            <label for="message" class="block text-lg font-medium text-white"
-              >Message</label
-            >
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              required
-              class="mt-1 block w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            ></textarea>
-          </div>
-
-          <!-- Bouton d'envoi -->
-          <nav class="py-4 mx-auto">
-            <button
-              id="submitBtn"
-              type="submit"
-              class="border border-white text-white bg-transparent py-2 px-4 rounded hover:bg-white hover:text-gray-800 transition duration-200 flex gap-2 text-white font-bold rounded-lg justify-center md:justify-start"
-            >
-              Envoyer
-              <span class="icon-arrow-up text-white"></span>
-            </button>
-          </nav>
-        </form>
+    <main class="flex flex-col justify-between">
+      <section class="w-full text-center py-16 lg:py-24" style="background-image: url('./assets/images/couverture_v2.png'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+        <h1 class="text-6xl sm:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-roi-light via-feu-primary to-feu-dark inline-block text-transparent bg-clip-text py-12 tracking-tighter leading-tight">
+          Le Feu Sombre
+        </h1>
+        <p class="text-lg sm:text-2xl md:text-3xl text-neutre-light leading-relaxed max-w-5xl py-12 mx-auto">
+          Kratès, l’ennemi des peuples libres, a subi une défaite inattendue au
+          pied de la citadelle de Confluences. Il décide de regrouper ses forces
+          à Kronstein, capitale du Witlant et foyer de Saga, la reine du Nord.
+          De là, il espère bien venir à bout des forces alliées, bien
+          inférieures en nombre, et de soumettre le reste de l’humanité, qui
+          viendra grossir son armée de “brûlés”. Mais l’Asteri déchu ne s’attend
+          pas à ce que son ancienne famille ait bâti un scénario pour venir à
+          bout de sa malice. Sofia, dernière souveraine des Asteri, n’a pas
+          voulu tout révéler à Jehan lors de leur rencontre. Ce n’est qu’à la
+          fin qu'il comprendra que son amnésie protège en réalité le plan
+          élaboré depuis des siècles par le peuple des étoiles…
+        </p>
       </section>
-    </article>
+
+<section id="characters" class="py-16 lg:py-24">
+  <h2 class="text-5xl sm:text-6xl font-bold bg-gradient-to-r from-feu-primary via-feu-light to-roi-light inline-block text-transparent bg-clip-text text-center w-full mb-12">
+    Les personnages
+  </h2>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide bg-roi-light text-neutre-light flex flex-col items-center justify-center p-8 md:p-12">
+          <img src="./assets/images/Jehan.png" alt="Jehan" class="w-full h-auto max-h-96 object-cover rounded-lg mb-6 shadow-md" />
+          <h3 class="text-3xl font-semibold text-feu-light mb-3">Jehan</h3>
+          <p class="text-lg text-center leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+            ac purus at odio interdum tincidunt. Nulla facilisi. Integer
+            sit amet eros ut arcu vehicula tristique.
+          </p>
+        </div>
+        <div class="swiper-slide bg-roi-light text-neutre-light flex flex-col items-center justify-center p-8 md:p-12">
+          <img src="./assets/images/Saga.png" alt="Saga" class="w-full h-auto max-h-96 object-cover rounded-lg mb-6 shadow-md" />
+          <h3 class="text-3xl font-semibold text-feu-light mb-3">Saga</h3>
+          <p class="text-lg text-center leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+            ac purus at odio interdum tincidunt. Nulla facilisi. Integer
+            sit amet eros ut arcu vehicula tristique.
+          </p>
+        </div>
+      <div class="swiper-slide bg-roi-light text-neutre-light flex flex-col items-center justify-center p-8 md:p-12">
+          <img src="./assets/images/Ooloto.png" alt="Sofia" class="w-full h-auto max-h-96 object-cover rounded-lg mb-6 shadow-md" />
+          <h3 class="text-3xl font-semibold text-feu-light mb-3">Ooloto</h3>
+          <p class="text-lg text-center leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+            ac purus at odio interdum tincidunt. Nulla facilisi. Integer
+            sit amet eros ut arcu vehicula tristique.
+          </p>
+        </div>
+        <div class="swiper-slide bg-roi-light text-neutre-light flex flex-col items-center justify-center p-8 md:p-12">
+          <img src="./assets/images/Sokia.png" alt="Sofia" class="w-full h-auto max-h-96 object-cover rounded-lg mb-6 shadow-md" />
+          <h3 class="text-3xl font-semibold text-feu-light mb-3">SoKia</h3>
+          <p class="text-lg text-center leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+            ac purus at odio interdum tincidunt. Nulla facilisi. Integer
+            sit amet eros ut arcu vehicula tristique.
+          </p>
+        </div>
+        <div class="swiper-slide bg-roi-light text-neutre-light flex flex-col items-center justify-center p-8 md:p-12">
+          <img src="./assets/images/Krates.png" alt="Kratès" class="w-full h-auto max-h-96 object-cover rounded-lg mb-6 shadow-md" />
+          <h3 class="text-3xl font-semibold text-feu-light mb-3">Kratès</h3>
+          <p class="text-lg text-center leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+            ac purus at odio interdum tincidunt. Nulla facilisi. Integer
+            sit amet eros ut arcu vehicula tristique.
+          </p>
+        </div>
+        
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</section>
+
+      <section id="universe" class="py-16 lg:py-24">
+        <h2 class="text-5xl sm:text-6xl font-bold bg-gradient-to-r from-feu-dark via-feu-primary to-roi-light inline-block text-transparent bg-clip-text text-center w-full mb-12">
+          L'univers
+        </h2>
+        <p class="text-lg sm:text-xl text-neutre-light leading-relaxed max-w-4xl mx-auto text-center">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo maxime
+          fugit quis asperiores. Pariatur doloremque cumque recusandae nemo
+          laboriosam! Vel velit quasi laborum nisi officiis ipsum sint quia
+          possimus similique. Reiciendis, cupiditate libero ratione molestias
+          hic veritatis exercitationem. Illum vitae sed excepturi, deserunt
+          repellat tempora maiores corporis dolorem, obcaecati, nesciunt dolores
+          totam vel in nostrum alias inventore corrupti nam! Libero. Dolore
+          quisquam perferendis delectus doloribus quos tempora error rerum?
+          Earum, repellendus doloremque consequuntur veritatis ex autem iusto
+          nisi distinctio aperiam non eveniet iure culpa suscipit quidem tempora
+          accusamus sequi quo. Totam impedit alias doloribus eaque numquam
+          cumque beatae quidem, porro nobis optio repudiandae doloremque quam
+          autem harum magni. Fugit fugiat iste est optio odio ex autem
+          architecto sit quos maiores. Numquam vero cupiditate minima labore
+          perspiciatis consequuntur cum explicabo, excepturi iste provident,
+          ratione hic. Exercitationem nostrum, voluptatem est perspiciatis iste
+          ipsum, veritatis porro suscipit numquam provident itaque doloremque,
+          modi enim.
+        </p>
+      </section>
+
+      <section id="contact" class="py-16 lg:py-24 bg-roi-light rounded-3xl shadow-2xl px-6 md:px-12 lg:px-24 flex items-center justify-center">
+        <div class="bg-feu-dark text-neutre-light rounded-2xl shadow-xl p-8 sm:p-12 w-full max-w-2xl">
+          <h2 class="text-4xl sm:text-5xl font-bold text-neutre-light text-center mb-8">
+            Me contacter
+          </h2>
+          <form action="#" method="POST" class="flex flex-col gap-6">
+            <div>
+              <label for="name" class="block text-lg font-medium text-neutre-light mb-2">Nom</label>
+              <input type="text" id="name" name="name" required class="mt-1 block w-full px-5 py-3 bg-roi-primary border border-roi-light rounded-xl shadow-sm focus:ring-feu-light focus:border-feu-light text-neutre-light placeholder-neutre-dark transition-all duration-300" />
+            </div>
+
+            <div>
+              <label for="prenom" class="block text-lg font-medium text-neutre-light mb-2">Prénom</label>
+              <input type="text" id="prenom" name="prenom" required class="mt-1 block w-full px-5 py-3 bg-roi-primary border border-roi-light rounded-xl shadow-sm focus:ring-feu-light focus:border-feu-light text-neutre-light placeholder-neutre-dark transition-all duration-300" />
+            </div>
+
+            <div>
+              <label for="email" class="block text-lg font-medium text-neutre-light mb-2">Email</label>
+              <input type="email" id="email" name="email" required class="mt-1 block w-full px-5 py-3 bg-roi-primary border border-roi-light rounded-xl shadow-sm focus:ring-feu-light focus:border-feu-light text-neutre-light placeholder-neutre-dark transition-all duration-300" />
+            </div>
+
+            <div>
+              <label for="subject" class="block text-lg font-medium text-neutre-light mb-2">Sujet</label>
+              <input type="text" id="subject" name="subject" required class="mt-1 block w-full px-5 py-3 bg-roi-primary border border-roi-light rounded-xl shadow-sm focus:ring-feu-light focus:border-feu-light text-neutre-light placeholder-neutre-dark transition-all duration-300" />
+            </div>
+
+            <div>
+              <label for="message" class="block text-lg font-medium text-neutre-light mb-2">Message</label>
+              <textarea id="message" name="message" rows="6" required class="mt-1 block w-full px-5 py-3 bg-roi-primary border border-roi-light rounded-xl shadow-sm focus:ring-feu-light focus:border-feu-light text-neutre-light placeholder-neutre-dark resize-y transition-all duration-300"></textarea>
+            </div>
+
+            <div class="flex justify-center mt-6">
+              <button id="submitBtn" type="submit" class="inline-flex items-center px-8 py-4 bg-feu-primary text-neutre-light font-bold rounded-full shadow-lg hover:bg-feu-light hover:text-roi-primary transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-feu-light">
+                Envoyer
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
 
     <div id="footer"></div>
-    <script src="./src/main.js" defer></script>
-    <button
-      id="scrollTopBtn"
-      class="px-2 py-2 bg-ikami-gradient text-white rounded-md hover:bg-orange-600 border border-gray-200 shadow-lg hover:shadow-xl fixed bottom-8 right-8 hidden z-50 icon-chevron-up"
-    ></button>
-    <!--Swiper-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      defer
-    ></script>
-  </body>
+    
+    <button id="scrollTopBtn" class="fixed bottom-8 right-8 p-4 bg-feu-primary text-neutre-light rounded-full shadow-lg hover:bg-feu-light hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-feu-light hidden z-50">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+      </svg>
+    </button>
+    </body>
 </html>

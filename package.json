@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "postcss.config.js",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/input.css -o ./assets/css/output.css --watch"
+    "build": "tailwindcss -i ./src/input.css -o ./assets/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
