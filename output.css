@@ -655,6 +655,9 @@ video {
  .max-w-5xl{
   max-width: 64rem;
 } 
+ .flex-shrink{
+  flex-shrink: 1;
+} 
  .shrink{
   flex-shrink: 1;
 } 
