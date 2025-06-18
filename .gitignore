@@ -1,0 +1,31 @@
+# Dossiers de dépendances
+node_modules/
+
+# Fichiers de build / Distribution
+dist/
+build/
+.next/ # Si vous utilisez Next.js
+out/   # Si vous utilisez un générateur de site statique qui exporte ici
+
+# Fichiers CSS générés par Tailwind
+# Si votre fichier de sortie est par exemple dans dist/output.css,
+# vous pouvez ignorer seulement le dossier dist/ comme ci-dessus.
+# Sinon, si votre fichier CSS compilé est ailleurs, spécifiez-le :
+# css/output.css
+
+# Fichiers de configuration et d'environnement
+.env
+.env.local
+
+# Fichiers système d'exploitation
+.DS_Store
+Thumbs.db
+
+# Fichiers de logs ou temporaires
+npm-debug.log*
+yarn-debug.log*
+.log
+*.tmp
+*.temp
+# Local Netlify folder
+.netlify
